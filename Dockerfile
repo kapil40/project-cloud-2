@@ -3,10 +3,10 @@ MAINTAINER kapil@gmail.com
 RUN yum install -y httpd \
     zip \ 
     unzip
-ADD https://www.free-css.com/assets/files/free-css-templates/download/page271/pure.zip /var/www/html
+ADD https://www.free-css.com/assets/files/free-css-templates/download/page269/meticulous.zip /var/www/html
 WORKDIR /var/www/html
-RUN unzip pure.zip
-RUN cp -rvf pure/* .
-RUN rm -rf __MACOSX pure pure.zip
+RUN unzip meticulous.zip
+RUN cp -rvf meticulous/* .
+RUN rm -rf meticulous meticulous.zip
 CMD ["/usr/sbin/httpd","-D","FOREGROUND"]
 EXPOSE 80
